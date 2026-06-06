@@ -1,88 +1,80 @@
 {
-	"spire_starfall" : {
-		"type" : "combat",
-		"name" : "Star Fall [old]",
-		"school" : {
-			"air" : true,
-			"earth" : false,
-			"fire" : false,
-			"water" : false
-		},
-		"level" : 5,
-		"power" : 15,
-		"defaultGainChance" : 0,
-		"gainChance" : {
-			"spire" : 30,
-			"tower" : 0,
-			"necropolis" : 0,
-			"conflux" : 0
-		},
-
-		"flags" : {
-			"damage" : true,
-			"negative" : true
-		},
-		"targetCondition" : {
-			"allOf" : {},
-			"anyOf" : {},
-			"noneOf" : {
-				//				"core:bonus.DIRECT_DAMAGE_IMMUNITY" : "normal"
-			}
-		},
-
-		"graphics" : {
-			"iconBook" : "spire/spells/starfallBook",
-			"iconScroll" : "spire/spells/starfallScroll",
-			"iconScenarioBonus" : "spire/spells/starfallScenario",
-			"iconEffect" : "spire/spells/starfallEffect",
-			"iconImmune" : "spire/spells/starfallImmune"
-		},
-
-		"animation" : {
-			"affect" : [
-				{
-					"defName" : "spire/spells/starfall.def"
-				}
-			]
-		},
-
-		"sounds" : {
-			"cast" : "spire/STARREIN.wav"
-		},
-		"targetType" : "CREATURE",
-
-		"levels" : {
-			"base" : {
-				//				"aiValue" : 25,
-				"range" : "0,1",
-				"battleEffects" : {
-					"directDamage" : {
-						"type" : "core:damage"
-					}
-				},
-				"targetModifier" : {
-					"smart" : false
-				},
-				"cost" : 14,
-				"power" : 25
-			},
-			"none" : {
-				"description" : "{Star fall}\n\nDeals damage to all creatures in the targeted area (7 hexes) equal to (Power*25)+25."
-			},
-			"basic" : {
-				"description" : "{Basic Star Fall}\n\nSummon meteorites and contribute to range effects.\n"
-			},
-			"advanced" : {
-				"description" : "{Advanced Star Fall}\n\nSummon meteorites and contribute to range effects.\n",
-				"cost" : 12,
-				"power" : 50
-			},
-			"expert" : {
-				"description" : "{Expert Star Fall}\n\nSummon meteorites and contribute to range effects.\n\nMake double damages than basic level.\n",
-
-				"cost" : 12,
-				"power" : 100
-			}
-		}
-	}
+  "spire_starfall": {
+    "type": "combat",
+    "name": "Starfall",
+    "school": {
+      "air": false,
+      "earth": false,
+      "fire": false,
+      "water": false,
+      "psychic": true
+    },
+    "level": 5,
+    "power": 15,
+    "defaultGainChance": 0,
+    "gainChance": {
+      "spire": 30,
+      "tower": 0,
+      "necropolis": 0,
+      "conflux": 0
+    },
+    "flags": {
+      "damage": true,
+      "negative": true
+    },
+    "targetCondition": {
+      "allOf": {},
+      "anyOf": {},
+      "noneOf": {}
+    },
+    "graphics": {
+      "iconBook": "spire/spells/starfallBook",
+      "iconScroll": "spire/spells/starfallScroll",
+      "iconScenarioBonus": "spire/spells/starfallScenario",
+      "iconEffect": "spire/spells/starfallEffect",
+      "iconImmune": "spire/spells/starfallImmune"
+    },
+    "animation": {
+      "affect": [
+        {
+          "defName": "spire/spells/starfall.def"
+        }
+      ]
+    },
+    "sounds": {
+      "cast": "spire/STARREIN.wav"
+    },
+    "targetType": "CREATURE",
+    "levels": {
+      "base": {
+        "range": "0,1",
+        "battleEffects": {
+          "directDamage": {
+            "type": "core:damage"
+          }
+        },
+        "targetModifier": {
+          "smart": false
+        },
+        "cost": 14,
+        "power": 25
+      },
+      "none": {
+        "description": "{Starfall}\n\nDeals damage to all creatures in the targeted area (7 hexes) equal to (Power*25)+25."
+      },
+      "basic": {
+        "description": "{Basic Starfall}\n\nSummon meteorites and contribute to range effects.\n"
+      },
+      "advanced": {
+        "description": "{Advanced Starfall}\n\nSummon meteorites and contribute to range effects.\n",
+        "cost": 12,
+        "power": 50
+      },
+      "expert": {
+        "description": "{Expert Starfall}\n\nSummon meteorites and contribute to range effects.\n\nMake double damages than basic level.\n",
+        "cost": 12,
+        "power": 100
+      }
+    }
+  }
 }
