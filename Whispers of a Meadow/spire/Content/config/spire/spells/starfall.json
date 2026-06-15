@@ -1,88 +1,88 @@
 {
-  "starfall": {
-    "type": "combat",
-    "name": "Starfall",
-    "school": {
-      "air": false,
-      "earth": false,
-      "fire": false,
-      "water": false,
-      "psychic": true
-    },
-    "level": 3,
-    "power": 10,
-    "defaultGainChance": 100,
-    "gainChance": {
-      "castle": 100,
-      "rampart": 100,
-      "tower": 100,
-      "inferno": 100,
-      "necropolis": 100,
-      "dungeon": 100,
-      "stronghold": 100,
-      "fortress": 100,
-      "conflux": 100
-    },
-    "targetType": "LOCATION",
-    "animation": {
-      "affect": [
-        "spire/spells/comet.def"
-      ]
-    },
-    "sounds": {
-      "cast": "METEOR"
-    },
-    "graphics": {
-      "iconBook": "spire/spells/starfall/blizz_iconBook.bmp",
-      "iconScroll": "spire/spells/starfall/blizz_iconScroll.bmp",
-      "iconScenarioBonus": "spire/spells/starfall/blizz_iconScenarioBonus.bmp",
-      "iconEffect": "spire/spells/starfall/blizz_iconEffect.bmp",
-      "iconImmune": "spire/spells/starfall/blizz_iconEffect.bmp"
-    },
-    "flags": {
-      "damage": true,
-      "negative": true
-    },
-    "targetCondition": {},
-    "levels": {
-      "base": {
-        "cost": 0,
-        "power": 10,
-        "range": "1",
-        "battleEffects": {
-          "directDamage": {
-            "type": "core:damage"
-          }
+    "starfall": {
+        "type": "combat",
+        "name": "Starfall",
+        "school": {
+            "air": false,
+            "earth": false,
+            "fire": false,
+            "water": false,
+            "psychic": true
         },
-        "targetModifier": {
-          "smart": false,
-          "clearAffected": false
+        "level": 3,
+        "power": 10,
+        "defaultGainChance": 100,
+        "gainChance": {
+            "castle": 100,
+            "rampart": 100,
+            "tower": 100,
+            "inferno": 100,
+            "necropolis": 100,
+            "dungeon": 100,
+            "stronghold": 100,
+            "fortress": 100,
+            "conflux": 100
+        },
+        "targetType": "LOCATION",
+        "animation": {
+            "affect": [
+                "spire/spells/comet.def"
+            ]
+        },
+        "sounds": {
+            "cast": "METEOR"
+        },
+        "graphics": {
+            "iconBook": "spire/spells/starfall/blizz_iconBook.bmp",
+            "iconScroll": "spire/spells/starfall/blizz_iconScroll.bmp",
+            "iconScenarioBonus": "spire/spells/starfall/blizz_iconScenarioBonus.bmp",
+            "iconEffect": "spire/spells/starfall/blizz_iconEffect.bmp",
+            "iconImmune": "spire/spells/starfall/blizz_iconEffect.bmp"
+        },
+        "flags": {
+            "damage": true,
+            "negative": true
+        },
+        "targetCondition": {},
+        "levels": {
+            "base": {
+                "cost": 0,
+                "power": 10,
+                "range": "1",
+                "battleEffects": {
+                    "directDamage": {
+                        "type": "core:damage"
+                    }
+                },
+                "targetModifier": {
+                    "smart": false,
+                    "clearAffected": false
+                }
+            },
+            "none": {
+                "description": "{Starfall}\n\nSummon comets and stars from the night sky.\nTroops in hexes surrounding target hex receive (10 + (spell power x 10)) in damage. Target hex is unaffected.",
+                "cost": 15,
+                "power": 10,
+                "range": "1"
+            },
+            "basic": {
+                "description": "{Basic Starfall}\n\nSummon comets and stars from the night sky.\nTroops in hexes surrounding target hex receive (10 + (spell power x 10)) in damage. Target hex is unaffected.",
+                "cost": 15,
+                "power": 10,
+                "range": "1"
+            },
+            "advanced": {
+                "description": "{Advanced Starfall}\n\nSummon comets and stars from the night sky.\nTroops in hexes surrounding target hex receive (25 + (spell power x 10)) in damage. Target hex is affected.",
+                "cost": 12,
+                "power": 25,
+                "range": "0,1"
+            },
+            "expert": {
+                "description": "{Expert Starfall}\n\nSummon comets and stars from the night sky.\nTroops in hexes surrounding target hex and a radius of 3 from the center receive (50 + (spell power x 10)) in damage. Target hex is affected.",
+                "cost": 10,
+                "power": 50,
+                "range": "0,1,3"
+            }
         }
-      },
-      "none": {
-        "description": "{Starfall}\n\nNo mastery: Frost Ring-like pattern. Troops in hexes surrounding the target hex receive damage. The target hex is unaffected.\n\nDamage: 10 + Spell Power x 10.",
-        "cost": 15,
-        "power": 10,
-        "range": "1"
-      },
-      "basic": {
-        "description": "{Basic Starfall}\n\nBasic: Frost Ring-like pattern. Troops in hexes surrounding the target hex receive damage. The target hex is unaffected.\n\nDamage: 10 + Spell Power x 10.",
-        "cost": 15,
-        "power": 10,
-        "range": "1"
-      },
-      "advanced": {
-        "description": "{Advanced Starfall}\n\nAdvanced: Fireball-like pattern. Troops in the target hex and surrounding hexes receive damage.\n\nDamage: 25 + Spell Power x 10.",
-        "cost": 12,
-        "power": 25,
-        "range": "0,1"
-      },
-      "expert": {
-        "description": "{Expert Starfall}\n\nExpert: target hex, radius 1 and radius 3 receive damage. Radius 2 should be unaffected.\n\nDamage: 50 + Spell Power x 10.",
-        "cost": 10,
-        "power": 50,
-        "range": "0,1,3"
-      }
     }
-  }
 }
